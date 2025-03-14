@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inicio</title>
+    <link rel="stylesheet" href="styles/stylesIndex.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="html/about.html">About Us</a></li>
+                <li><a href="html/contact.html">Contact</a></li>   
+                <li>
+                    <div class="search-container">
+                        <input type="text" id="search" placeholder="Buscar...">
+                        <button onclick="searchFunction()">Buscar</button>
+                    </div>
+                </li>             
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <br><br><br>
+        <div class="welcome">
+            <h1>Welcome to our homepage</h1>
+            <p>Welcome to our website! Explore our recommendations.</p>
+        </div>
+        <br><br><br><br><br><br><br><br><br><br><br><br>
+        <div class="recommendations">
+            <div class="recommendation1">
+                <h2>Recommendations of Places</h2>
+                <p>Vacation Recommendation: Discover the Beauty of the Caribbean
+
+                    Looking for the perfect vacation destination? Look no further than the stunning Caribbean! With its crystal-clear turquoise waters, white sandy beaches, and vibrant local culture, the Caribbean offers an unforgettable escape from the everyday. Whether you're looking for a relaxing beach getaway or an adventurous exploration of island life, the Caribbean has something for everyone.
+                    
+                    Spend your days lounging under a beach umbrella with a cocktail in hand, or dive into the vibrant coral reefs with world-class snorkeling and scuba diving. </p>
+            </div>
+        
+            <!-- Recomendación Playa -->
+            <div class="recommendation">
+                <h3>Beach</h3>
+                <img src="images/beach1.jpg" alt="Beach 1" class="clickable-img" data-image="beach2.jpg">
+                <img src="images/beach2.jpg" alt="Beach 2" class="clickable-img" data-image="beach1.jpg">
+            </div>
+            <br>
+        
+            <!-- Recomendación Templo -->
+            <div class="recommendation">
+                <h3>Temple</h3>
+                <img src="images/temple1.jpg" alt="Temple 1" class="clickable-img" data-image="temple2.jpg">
+                <img src="images/temple2.jpg" alt="Temple 2" class="clickable-img" data-image="temple1.jpg">
+            </div>
+            <br>
+        
+            <!-- Recomendación País -->
+            <div class="recommendation">
+                <h3>Country</h3>
+                <img src="images/country1.jpg" alt="Country 1" class="clickable-img" data-image="country2.jpg">
+                <img src="images/country2.jpg" alt="Country 2" class="clickable-img" data-image="country1.jpg">
+            </div>
+            <br> 
+        </div>
+    </main>  
+
+    <script src="../js/script.js"></script>
+</body>
+</html>

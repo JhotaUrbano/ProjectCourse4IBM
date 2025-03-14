@@ -1,0 +1,270 @@
+/* Estilos generales */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    /* Imagen de fondo */
+    background-image: url("../images/backgroundBody1.jpg");
+    background-size: cover; /* Hace que la imagen cubra toda la pantalla */
+    background-position: center center; /* Centra la imagen */
+    background-repeat: no-repeat;
+    background-attachment: fixed; /* Hace que la imagen se quede fija mientras se hace scroll */
+    color: black; /* Esto asegura que el texto sea visible sobre el fondo */ 
+
+    
+}
+
+main {
+    padding: 5px;
+    margin: 5px;
+}
+.welcome p, h1{
+    display: flex;
+    justify-content: center; /* Centra horizontalmente */
+    text-align: center; /* Asegura que el texto dentro del body también esté centrado */
+    
+}
+.welcome{
+    border: 5px solid grey;
+    border-radius: 8px;
+    background-image: url("../images/background.jpg");
+    background-size: cover;
+    background-position: center center;
+    background-attachment: fixed;
+    opacity: 0.9; /* Ajusta la transparencia de la imagen de fondo */
+}
+
+
+header {
+    background-color: #333;
+    padding: 10px;
+}
+
+footer {
+    background-color: #333;
+    padding: 10px;
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    justify-content: flex-end; /* Alinea los elementos del nav a la derecha */
+}
+
+header nav ul li {
+    margin: 0;
+    justify-content: flex-end; /* Alinea los elementos del nav a la derecha */
+}
+
+header nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+header nav ul li a:hover {
+    color: #ff6347;
+}
+
+/* Sección de recomendaciones */
+.recommendations {
+    display: flex;
+    gap: 30px;
+    justify-content: space-around;
+    padding: 20px;
+    flex: 1;
+    flex-wrap: wrap; /* Asegura que las recomendaciones se ajusten en pantallas pequeñas */
+}
+
+.recommendation {
+    text-align: center;
+    border: 5px solid grey;
+    border-radius: 8px;
+    padding: 2px;
+    position: relative; /* Necesario para el pseudoelemento */
+    color: black; /* Esto asegura que el texto sea visible sobre el fondo */
+    width: 250px; /* Establece un ancho fijo para las recomendaciones */
+    margin: 10px;
+    overflow: hidden; /* Asegura que nada se desborde del contenedor */
+}
+
+.recommendation::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url("../images/background.jpg");
+    background-size: cover;
+    background-position: center center;
+    background-attachment: fixed;
+    opacity: 0.5; /* Ajusta la transparencia de la imagen de fondo */
+    z-index: -1; /* Asegura que la capa esté detrás del contenido */
+}
+
+.recommendation img {
+    width: 200px;
+    height: 150px;
+    object-fit: cover;
+    cursor: pointer;
+    margin: 10px;
+    transition: transform 0.3s ease;
+    border: 3px solid grey; /* Borde rojo de 3px */
+    border-radius: 8px; /* Borde redondeado */
+}
+
+.recommendation img:hover {
+    transform: scale(1.1);
+}
+
+
+.recommendation1 {
+    text-align: center;
+    border: 5px solid grey;
+    border-radius: 8px;
+    padding: 2px;
+    position: relative; /* Necesario para el pseudoelemento */
+    color: black; /* Esto asegura que el texto sea visible sobre el fondo */
+    width: 250px; /* Establece un ancho fijo para las recomendaciones */
+    margin: 10px;
+    overflow: hidden; /* Asegura que nada se desborde del contenedor */
+}
+
+.recommendation1::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url("../images/background.jpg");
+    background-size: cover;
+    background-position: center center;
+    background-attachment: fixed;
+    opacity: 0.5; /* Ajusta la transparencia de la imagen de fondo */
+    z-index: -1; /* Asegura que la capa esté detrás del contenido */
+}
+
+.recommendation1 img {
+    width: 200px;
+    height: 150px;
+    object-fit: cover;
+    cursor: pointer;
+    margin: 10px;
+    transition: transform 0.3s ease;
+    border: 3px solid grey; /* Borde rojo de 3px */
+    border-radius: 8px; /* Borde redondeado */
+}
+
+.recommendation1 img:hover {
+    transform: scale(1.1);
+}
+
+
+/* Formulario de contacto */
+form {
+    max-width: 500px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+form input, form textarea, form button {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+form button {
+    background-color: #333;
+    color: white;
+    cursor: pointer;
+}
+
+form button:hover {
+    background-color: #ff6347;
+}
+
+/* Estilos Responsivos */
+@media (max-width: 1024px) {
+    header nav ul {
+        gap: 15px;
+    }
+
+    header nav ul li a {
+        font-size: 16px;
+    }
+
+    .recommendation {
+        width: 220px; /* Reduce el tamaño de las recomendaciones en pantallas más pequeñas */
+    }
+}
+
+@media (max-width: 768px) {
+    /* Header y navegación en pantallas pequeñas */
+    header nav ul {
+        flex-direction: column; /* Cambia la navegación a columna */
+        padding: 10px 0;
+    }
+
+    header nav ul li {
+        margin: 5px 0;
+    }
+
+    header nav ul li a {
+        font-size: 14px;
+    }
+
+    /* Recomendaciones */
+    .recommendations {
+        flex-direction: column; /* Apila las recomendaciones verticalmente */
+        align-items: center;
+    }
+
+    .recommendation {
+        width: 80%; /* Hace que las recomendaciones ocupen el 80% del ancho de la pantalla */
+        margin-bottom: 20px;
+    }
+
+    .recommendation img {
+        width: 100%; /* Las imágenes ocuparán todo el ancho disponible */
+    }
+
+    /* Formulario de contacto */
+    form {
+        max-width: 100%;
+        padding: 15px;
+    }
+
+    form input, form textarea, form button {
+        padding: 8px;
+    }
+}
+
+@media (max-width: 480px) {
+    /* Header y navegación en pantallas muy pequeñas */
+    header nav ul li a {
+        font-size: 12px; /* Reduce el tamaño de la fuente */
+    }
+
+    /* Recomendaciones */
+    .recommendations {
+        gap: 15px; /* Reduce el espacio entre las recomendaciones */
+    }
+
+    .recommendation {
+        width: 90%; /* Las recomendaciones ocupan más espacio en pantallas pequeñas */
+    }
+
+    .recommendation img {
+        width: 100%; /* Las imágenes ocupan el 100% del ancho disponible */
+    }
+}
+
